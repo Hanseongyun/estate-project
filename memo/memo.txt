@@ -113,8 +113,6 @@ IOC : 제어의 역전
 AOP : 관점 지향 프로그래밍 
 
 
-
-
 응답 : 성공
 HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
@@ -162,3 +160,15 @@ Content-Type: application/json;charset=UTF-8
  "code": "DBE",
  "message": "Database Error"
 }
+
+*4/24
+
+UUID 생성기
+6C41FAC2-4265-4EA3-967F-C1BCF0A2B64F
+
+
+JwtAuthenticationFilter
+확장(extends OncePerRequestFilter) + 빠른수정
+
+
+
