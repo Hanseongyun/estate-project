@@ -170,5 +170,32 @@ UUID 생성기
 JwtAuthenticationFilter
 확장(extends OncePerRequestFilter) + 빠른수정
 
+SELECT *
+FROM user
+WHERE user_id = :userId
 
+-> 
+
+findByUserId(userId)
+existsByUserId(userId)   > 있다없다만 판단
+
+ResponseCode 작성
+
+200 성공 : SU / Success
+400 필수 데이터 미입력 : VF / Varidation Failed
+400 중복된 아이디 : DI / Duplicatied Id
+400 중복된 이메일 : DE / Duplicatied Email
+401 로그인 정보 불일치 : SF / Sign in Failed
+401 인증 실패 : AF / Authentication Failed
+500 토큰 생성 실패 : TF / Token creation Failed
+500 이메일 전송 실패 : MF / Mail send Failed
+500 데이터베이스 오류 : DBE / Database Error
+
+
+클래스로 매서드로 직접 접근 static
+
+ResponseEntity의 제너릭타입 <>
+? extend A  > A 혹은 A의 자손들
+
+? super B  > B 혹은 B의 조상들
 
