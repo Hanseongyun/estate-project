@@ -7,8 +7,10 @@ import com.estate.back.dto.response.ResponseCode;
 import com.estate.back.dto.response.ResponseDto;
 import com.estate.back.dto.response.ResponseMessage;
 
-// 로그인 Response Body DTO
+import lombok.Getter;
 
+// 로그인 Response Body DTO
+@Getter
 public class SignInResponseDto extends ResponseDto {
     
     private String accessToken;

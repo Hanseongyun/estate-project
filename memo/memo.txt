@@ -199,3 +199,20 @@ ResponseEntity의 제너릭타입 <>
 
 ? super B  > B 혹은 B의 조상들
 
+
+*4/25 
+구글 앱 비밀번호 juup jjxo xxrq heaq
+
+
+인증번호 확인
+SELECT *
+FROM user
+WHERE user_ email = :userEmail
+AND auth_number  = :authNumber
+
+findByUserEmailAndAuthNumber
+existsByUserEmailAndAuthNumber(String userEmail, String authNumber)
+
+패스워드 암호화 - 패스워드 인코더
+
+정규식 검사 사이트 : https://regex101.com/
