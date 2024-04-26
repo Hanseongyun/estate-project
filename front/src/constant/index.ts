@@ -18,7 +18,7 @@ export const QNA_DETAIL_ABSOLUTE_PATH = (receptionNumber: string) => `${SERVICE_
 export const QNA_UPDATE_ABSOLUTE_PATH = (receptionNumber: string) => `${SERVICE_PATH}/${QNA_PATH}/update/${receptionNumber}`;
 
 // description : API URL PATH 
-export const SERVER_DOMAIN_URL = 'http:localhost:4000';
+export const SERVER_DOMAIN_URL = 'http://localhost:4000';
 export const SERVER_API_URL = `${SERVER_DOMAIN_URL}/api/v1`
 export const SERVER_AUTH_MODULE_URL = `${SERVER_API_URL}/auth`;
 

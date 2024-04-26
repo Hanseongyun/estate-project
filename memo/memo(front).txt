@@ -10,3 +10,12 @@ npm install react-router react-router-dom react-cookie zustand zxios
     - :boardNumber (QnA 상세보기)
     - write (QnA 작성)
     - update/:boardNumber (QnA 수정)
+
+경로설정
+constant - index.ts	
+
+> DTO
+> API 함수 작성
+apis -
+
+공백인 상태를 파악 > 앞뒤로 공백을 제거해서 길이가0

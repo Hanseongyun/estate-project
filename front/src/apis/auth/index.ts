@@ -1,6 +1,6 @@
 import axios from "axios";
 import { EmailAuthCheckRequestDto, EmailAuthRequestDto, IdcheckRequestDto, SignInRequestDto, SignUpRequestDto } from "./dto/request";
-import { EMAIL_AUTH_CHECK_REQUEST_URL, ID_CHECK_REQUEST_URL, SIGN_IN_REQUEST_URL, SIGN_UP_REQUEST_URL } from "src/constant";
+import { EMAIL_AUTH_CHECK_REQUEST_URL, EMAIL_AUTH_REQUEST_URL, ID_CHECK_REQUEST_URL, SIGN_IN_REQUEST_URL, SIGN_UP_REQUEST_URL } from "src/constant";
 import { SignInResponseDto } from "./dto/response";
 import ResponseDto from "../response.dto";
 import { requestErrorHandler, requestHandler } from "..";
@@ -24,7 +24,7 @@ export const IdCheckRequest = async (requestBody: IdcheckRequestDto) => {
 
 // function: 이메일 인증 API 함수 
 export const emailAuthRequest = async (requestBody: EmailAuthRequestDto) => {
-    const result = await axios.post(EMAIL_AUTH_CHECK_REQUEST_URL, requestBody)
+    const result = await axios.post(EMAIL_AUTH_REQUEST_URL, requestBody)
         .then(requestHandler<ResponseDto>)
         .catch(requestErrorHandler);
     return result;
