@@ -19,3 +19,38 @@ constant - index.ts
 apis -
 
 공백인 상태를 파악 > 앞뒤로 공백을 제거해서 길이가0
+
+
+* 4/29
+로그인
+request body (accessToken, expires)
+브라우저의 쿠키 스토리지에 accessToken 필드에 받아온 
+accessToken 삽입, 만료 기간은 현재시간 + expires
+
+sns로그인
+kakao developers > 내애플리케이션 > 앱키
+
+client- 30b70c2b7d40f14ccd38ee9ad5a5a161
+secret - itLAf6DmAoGOE8y6EdoXmfesPPChKDnG
+
+네이버
+client - 5LGhHCcl7OoA_mW2jM0O
+secret - wzm8YCpf6m
+
+http://localhost:4000/oauth2/callback/kakao
+http://localhost:4000/oauth2/callback/naver
+
+http://localhost:4000/oauth2/authorization/github
+http://localhost:4000/api/v1/auth/oauth2/kakao
+http://localhost:4000/api/v1/auth/oauth2/naver
+
+
+
+
+
+
+
+
+
+
+

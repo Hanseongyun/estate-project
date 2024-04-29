@@ -1,0 +1,6 @@
+KAKAO
+{"id":3458613728,"connected_at":"2024-04-29T05:36:33Z","properties":{"nickname":"한성윤"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":true,"profile":{"nickname":"한성윤","is_default_nickname":false}}}
+
+
+NAVER
+{"resultcode":"00","message":"success","response":{"id":"lhIu9d8u_G2YEDlfhx-Ss9SOJCPorlIQq-r7qNGjb5M","nickname":"wrong****","profile_image":"https://ssl.pstatic.net/static/pwe/address/img_profile.png","name":"한성윤"}}

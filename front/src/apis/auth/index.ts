@@ -6,11 +6,11 @@ import ResponseDto from "../response.dto";
 import { requestErrorHandler, requestHandler } from "..";
 
 // function: 로그인 API 함수 
-export const SignInRequest = async (requestBody: SignInRequestDto) => {
+export const signInRequest = async (requestBody: SignInRequestDto) => {
     const result = await axios.post(SIGN_IN_REQUEST_URL, requestBody)
-        .then(requestHandler<SignInRequestDto>)                // then: 성공을 받음, apis-index.ts
-        .catch(requestErrorHandler);            // error: 실패(400,500번)를 받음, apis-index.ts
-
+        .then(requestHandler<SignInResponseDto>)                // then: 성공을 받음, apis-index.ts
+        .catch(requestErrorHandler);           // error: 실패(400,500번)를 받음, apis-index.ts
+ 
     return result;
 };
 
