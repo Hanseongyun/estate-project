@@ -31,4 +31,9 @@ client가 header에 bearer 토큰을 포함하여 요청
 11. 데이터베이스의 user테이블에서 userId에 해당하는 레코드를 조회
 11-1. 데이터베이스 오류 발생시 'DBE' 응답 처리
 12. 존재하는 user인지 확인 (null일 수 있음)
-12-1. 존재하지 않으면 'NU' 응답 처리
+12-1. 존재하지 않으면 'AF' 응답 처리
+13. 'SU' 응답 처리 (userId, userRole 포함)
+
+
+
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNDQ1OTY3NywiZXhwIjoxNzE0NDk1Njc3fQ.BkSqMgooDKl-FaguAHjf2FptUdOQ6O6jDq24-ofFfmo
