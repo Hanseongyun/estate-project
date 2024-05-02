@@ -40,7 +40,6 @@ public class AuthServiceImplimentation implements AuthService {
     public ResponseEntity<ResponseDto> idCheck(IdCheckRequestDto dto) {
 
         try {
-
             String userId = dto.getUserId();
             boolean existedUser = userRepository.existsByuserId(userId);
             if (existedUser) return ResponseDto.duplicatedId();

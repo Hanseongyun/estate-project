@@ -36,4 +36,42 @@ client가 header에 bearer 토큰을 포함하여 요청
 
 
 
-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNDQ1OTY3NywiZXhwIjoxNzE0NDk1Njc3fQ.BkSqMgooDKl-FaguAHjf2FptUdOQ6O6jDq24-ofFfmo
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNDQ1OTY3NywiZXhwIjoxNzE0ND1Njc3fQ.BkSqMgooDKl-FaguAHjf2FptUdOQ6O6jDq24-ofFfmo
+
+*5/2
+Q&A 게시판
+
+0. 클라이언트로부터 Authorization 헤더와 Request Body를 포함하여 요청
+0.1 권한이 없는 사용자이면 'AF' 응답 처리
+0.2 유효하지 않은 데이터이면 'VF' 응답 처리
+
+(title, contents), userId
+
+1. 데이터베이스의 user테이블에서 해당 유저가 존재하는지 확인 (writerId -foreign key, userId에 존재하는 아이디만 올 수 있음)
+1.1 존재하지 않는 유저라면 'AF' 응답 처리 (401)
+1.2 데이터베이스 오류가 발생하면 'DBE' 응답 처리
+
+2. Board 테이블에 데이터 삽입
+2.1 데이터베이스 오류가 발생하면 'DBE' 응답 처리
+
+3. 'SU' 응답 처리
+
+POST
+1. 인증 없이 -> "AF"
+2. 유효하지 않은 데이터 -> "VF" 
+3. "SU"
+
+
+admin : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNDYxNjc3OCwiZXhwIjoxNzE0NjUyNzc4fQ.ZefYLn1NAvf0bHsI4s-Q1RHKJjvILKr_mJn_pcySuUk
+
+
+
+
+
+
+
+
+
+
+
+

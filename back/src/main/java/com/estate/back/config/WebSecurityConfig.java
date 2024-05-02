@@ -56,6 +56,7 @@ public class WebSecurityConfig {
             .cors(cors -> cors.configurationSource(corsconfigurationSource()))
             .authorizeHttpRequests(request -> request
                 .requestMatchers("/", "/api/v1/auth/**", "/oauth2/callback/*").permitAll()
+                .requestMatchers("/api/v1/board/").hasRole("USER")          // ROLE_USER 가 아닌 USER로 작성
                 .anyRequest().authenticated()
             )
             .oauth2Login(oauth2 -> oauth2
