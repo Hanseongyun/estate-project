@@ -65,6 +65,34 @@ POST
 admin : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNDYxNjc3OCwiZXhwIjoxNzE0NjUyNzc4fQ.ZefYLn1NAvf0bHsI4s-Q1RHKJjvILKr_mJn_pcySuUk
 
 
+*5/30
+Q&A 게시물 검색
+
+SELECT *
+FROM board
+WHERE title LIKE '%searchWord%'
+ORDER BY reception_number DESC;
+
+findByTitleContainsOrderByReceptionNumberDesc();
+
+postman > GET 요청 > 밑에 내용이 안나오면 > @Getter 확인
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
