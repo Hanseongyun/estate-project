@@ -130,6 +130,23 @@ GET http://localhost:4000/api/v1/board/1
 
 = 조회수 증가 확인
 
+게시물 답변
+POST http://localhost:4000/api/v1/board/10/comment
+
+-USER / ADMIN
+= USER -> AF
+
+= request body 잘못 -> VF
+
+= 존재하지 않는 게시물 번호 -> NB
+
+= SU
+
+= 이미 작성된 답글 -> WC
+
+
+
+
 
 
 

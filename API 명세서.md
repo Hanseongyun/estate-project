@@ -1099,14 +1099,14 @@ Content-Type: application/json;charset=UTF-8
 
 ***
 
-#### - Q&A 게시물 조회수 증가
+#### - Q&A 게시물 답글 작성
   
 ##### 설명
 
-클라이언트로부터 Request Header의 Authorization 필드로 Bearer 토큰을 포함하여 접수번호를 입력받고 요청을 보내면 해당하는 Q&A 게시물의 조회수를 증가합니다. 만약 증가에 실패하면 실패처리를 합니다. 인가 실패, 데이터베이스 에러가 발생할 수 있습니다.
+클라이언트로부터 Request Header의 Authorization 필드로 Bearer 토큰을 포함하여 접수번호와 답글 내용을 입력받고 요청을 보내면 해당하는 Q&A 게시물의 답글이 작성됩니다. 만약 증가에 실패하면 실패처리를 합니다. 인가 실패, 데이터베이스 에러가 발생할 수 있습니다.
 
-- method : **PATCH**  
-- URL : **/{receptionNumber}/increase-view-count**
+- method : **POST**  
+- URL : **/{receptionNumber}/comment**
 
 ##### Request
 
@@ -1122,11 +1122,18 @@ Content-Type: application/json;charset=UTF-8
 |---|:---:|:---:|:---:|
 | receptionNumber | int | 접수번호 | O |
 
+###### Request Body
+
+| name | type | description | required |
+|---|:---:|:---:|:---:|
+| comment | Stirng | 답글 내용 | O |
+
 ###### Example
 
 ```bash
-curl -v -X PATCH "http://localhost:4000/api/v1/board/${receptionNumber}/increase-view-count" \
- -H "Authorization: Bearer {JWT}"
+curl -v -X POST "http://localhost:4000/api/v1/board/${receptionNumber}/comment" \
+ -H "Authorization: Bearer {JWT}" \
+ -d "comment={comment}"
 ```
 
 ##### Response
@@ -1173,6 +1180,16 @@ Content-Type: application/json;charset=UTF-8
 {
   "code": "NB",
   "message": "No Exist Board."
+}
+```
+
+**응답 : 실패 (이미 작성된 답글)**
+```bash
+HTTP/1.1 400 Bad Request
+Content-Type: application/json;charset=UTF-8
+{
+  "code": "WC",
+  "message": "Written Comment."
 }
 ```
 
