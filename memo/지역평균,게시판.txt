@@ -104,12 +104,31 @@ postman > GET 요청 > 밑에 내용이 안나오면 > @Getter 확인
 3 - 21 ~ 30
 4 - 31 ~ 32
 
+*5/7
+게시물 불러오기
 
+- 유효성 검사
 
+(receptionNumber)
 
+- 데이터베이스의 Board 테이블에서 receptionNumber에 해당하는 레코드 조회
+SELECT*
+FORM board
+WHERE reception_number = :receptionNumber;
 
+GET http://localhost:4000/api/v1/board/1
 
+= AF,NB 확인
+= 정상적으로 반환되는지 확인
 
+PATCH http://localhost:4000/api/v1/board/1/increase-view-count
+
+= AF,NB 확인
+= 정상적으로 반환되는지 확인
+
+GET http://localhost:4000/api/v1/board/1
+
+= 조회수 증가 확인
 
 
 
