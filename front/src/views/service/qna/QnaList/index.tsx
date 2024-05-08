@@ -76,6 +76,7 @@ export default function QnaList() {
     };
 
     const changeBoardList = (boardList: BoardListItem[]) => {
+        if (isToggleOn) boardList = boardList.filter(board => !board.status);        // 필터 (콜백함수 (아이템과 리스트)) 반환을 논리값(true.false형태)
         setBoardList(boardList);
 
         const totalLength = boardList.length;
@@ -108,6 +109,8 @@ export default function QnaList() {
 
         const {boardList} = result as GetBoardListResponseDto;
         changeBoardList(boardList);
+        setCurrentPage(1);
+        setCurrentSection(1);
     };
 
     const getSearchBoardListResponse = (result: GetSearchBoardListResponseDto | ResponseDto | null) => {
@@ -173,17 +176,17 @@ export default function QnaList() {
     useEffect(() => {
         if (!cookies.accessToken) return;
         getBoardListRequest(cookies.accessToken).then(getBoardListResponse);
-    }, [])
+    }, [isToggleOn]);
 
     useEffect(() => {
       if (!boardList.length) return;
       changePage(boardList, totalLength);
-    }, [currentPage])
+    }, [currentPage]);
 
     useEffect(() => {
       if (!boardList.length) return;
       changeSection(totalPage);
-    }, [currentSection])
+    }, [currentSection]);
     
     //                    render                    //
     const toggleClass = isToggleOn ? 'toggle-active' : 'toggle';

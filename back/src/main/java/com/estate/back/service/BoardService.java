@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 
 import com.estate.back.dto.request.board.PostBoardRequestDto;
 import com.estate.back.dto.request.board.PostCommentRequestDto;
+import com.estate.back.dto.request.board.PutBoardRequestDto;
 import com.estate.back.dto.response.ResponseDto;
 import com.estate.back.dto.response.board.GetBoardListResponseDto;
 import com.estate.back.dto.response.board.GetBoardResponseDto;
@@ -16,6 +17,11 @@ public interface BoardService {
     ResponseEntity<? super GetBoardListResponseDto> getBoardList();
     ResponseEntity<? super GetSearchBoardListResponseDto> getSearchBoardList(String searchWord);
     ResponseEntity<? super GetBoardResponseDto> getBoard(int receptionNumber);
+
+    ResponseEntity<ResponseDto> putBoard(PutBoardRequestDto dto, int receptionNumber, String userId);
+
     ResponseEntity<ResponseDto> increaseViewCount(int receptionNumber);
+
+    ResponseEntity<ResponseDto> deleteBoard(int receptionNumber, String userId);        // 접근주체의 아이디
 
 }

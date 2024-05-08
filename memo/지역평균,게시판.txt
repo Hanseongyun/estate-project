@@ -145,9 +145,25 @@ POST http://localhost:4000/api/v1/board/10/comment
 = 이미 작성된 답글 -> WC
 
 
+*5/8
+Q&A 게시물 삭제
 
+SELECT ~
 
+entity가 필요 writerId userId 비교, 삭제처리
 
+관리자 : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNTEyNzgxNSwiZXhwIjoxNzE1MTYzODE1fQ.TtW7oKjoGoopq5ax1uVlrQbk675g4GtK_6Qj22rk6tk
+사용자 : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZXJ2aWNlMTIzIiwiaWF0IjoxNzE1MTM0Njk1LCJleHAiOjE3MTUxNzA2OTV9.R2uCKpfcybh3SvcqV1GTpvNCX5YMozQgSMIc5YaiBiE
+
+DELETE http://localhost:4000/api/v1/board/10
+
+토큰없이 => 'AF'
+존재하지않는 게시물 => 'NB'
+작성자가 아닐때 => 'AF'
+
+성공 => 'SU'
+
+Q&A 게시물 수정
 
 
 

@@ -8,7 +8,7 @@ import { PostBoardRequestDto } from 'src/apis/board/dto/request';
 import { useCookies } from 'react-cookie';
 import ResponseDto from 'src/apis/response.dto';
 
-//                 function                   //
+//                 component                   //
 export default function QnaWrite() {
 
   //                  state                    //
@@ -87,5 +87,5 @@ export default function QnaWrite() {
         value={contents} onChange={onContentsChangeHandler}/>
       </div>
     </div>
-  )
+  );
 }

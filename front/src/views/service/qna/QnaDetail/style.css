@@ -56,6 +56,8 @@
     line-height: 24px;
 
     color: rgba(64, 64, 64, 1);
+
+    white-space: pre-wrap;          /** 줄바꿈처리 **/
 }
 
 .qna-detail-button-box {
@@ -86,10 +88,13 @@
     line-height: 24px;
     
     color: rgba(64, 64, 64, 1);
+
+    white-space: pre-wrap; 
 }
 
 .qna-detail-comment-write-box {
     display: flex;
+    align-items: start;             /* 박스 크기 고정 */
     gap: 12px;
 }
 
