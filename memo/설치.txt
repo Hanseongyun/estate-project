@@ -19,3 +19,5 @@ npm init
 
 
 포스트맨 설치
+
+깃으로 땡겨온후 반드시 (front에서) npm install 실행 > node_modules 생성
