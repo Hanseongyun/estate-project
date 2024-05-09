@@ -1,5 +1,5 @@
 * 4/26
-npm install react-router react-router-dom react-cookie zustand zxios
+npm install react-router react-router-dom react-cookie zustand axios
 
 폴더구조
 - authentication (로그인, 회원가입)

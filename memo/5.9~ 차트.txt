@@ -1,0 +1,5 @@
+*5/9
+지역평균, 비율계산 차트
+npm install chart.js
+npm install react-chartjs-2
+
