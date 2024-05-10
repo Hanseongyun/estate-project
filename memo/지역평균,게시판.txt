@@ -152,8 +152,8 @@ SELECT ~
 
 entity가 필요 writerId userId 비교, 삭제처리
 
-관리자 : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNTEyNzgxNSwiZXhwIjoxNzE1MTYzODE1fQ.TtW7oKjoGoopq5ax1uVlrQbk675g4GtK_6Qj22rk6tk
-사용자 : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZXJ2aWNlMTIzIiwiaWF0IjoxNzE1MTM0Njk1LCJleHAiOjE3MTUxNzA2OTV9.R2uCKpfcybh3SvcqV1GTpvNCX5YMozQgSMIc5YaiBiE
+관리자 : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxNTMwMjQwNywiZXhwIjoxNzE1MzM4NDA3fQ.ZYfnxEWTgYuTtMbfI2g-K010dbbj5wo-Cavxf_B3LtI
+사용자 : 
 
 DELETE http://localhost:4000/api/v1/board/10
 

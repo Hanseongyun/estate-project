@@ -3,3 +3,13 @@
 npm install chart.js
 npm install react-chartjs-2
 
+*5/10
+지역평균 데이터 불러오기
+
+*import*
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+sql 쿼리 > 키워드로 인식될수있는 단어 > 백틱으로 표현
