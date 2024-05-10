@@ -13,3 +13,55 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 sql 쿼리 > 키워드로 인식될수있는 단어 > 백틱으로 표현
+
+
+
+*프로젝트 준비
+
+포스트맨 > 저장 > view Documentation
+
+깃허브 - organization 생성 - 초대
+
+403 > 권한의심  > Change Role > Oner로 권한부여
+
+>repository 생성 (front , back 따로)
+
+한명이 먼저 프로젝트 생성 > 폴더구조 생성(폴더 생성후 빈 폴더 없게 Readme생성)
+
+다른팀원> git clone으로 받음
+git clone "주소"
+
+> 메인은 손대지말것 
+> 새로운 branch 생성 (git branch / a) > git chekcout a 
+> 새로운 branch 생성 (git branch / b) > git chekcout b
+
+a가 작업후 > add, commit 까지는 똑같이 > git push -u origin a > compare & pull request 클릭(팀원들에게 풀 요청보내기) 메인에 병합이됨
+> create pull request(충돌이 일어나면 pull이 되지않음) > merge pull request > 
+(처음엔 git push -u origin a  다음엔 git push만 해도됨)
+
+최종 메인에 병합된 후 > branch 클릭하면 현재 branch가 보임 > merge 삭제
+
+b는 git pull origin main(땡길땐 메인꺼) 
+> git add. > git commit > git push > 안떳을때 pull request >  b확인
+
+a가 다시작업 
+충돌이 될때 잘못된거 삭제 > git pull origin main > (현재 변경 사항 : 내가바꾼것, 수신변경사항 : 상대방이, 둘다수락)
+> add > commit > push 
+
+풀땡기면 npm install
+
+application.properties - ignore
+
+
+
+
+
+
+
+
+
+
+
+
+
+

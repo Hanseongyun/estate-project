@@ -10,7 +10,6 @@ export const signInRequest = async (requestBody: SignInRequestDto) => {
     const result = await axios.post(SIGN_IN_REQUEST_URL, requestBody)
         .then(requestHandler<SignInResponseDto>)                // then: 성공을 받음, apis-index.ts
         .catch(requestErrorHandler);           // error: 실패(400,500번)를 받음, apis-index.ts
- 
     return result;
 };
 
